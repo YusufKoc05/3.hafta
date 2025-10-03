@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(135deg, #757761, #a0a07d);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.pw-container {
+  background-color: #f4e76e;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  min-width: 400px;
+  color: #757761;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pw-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 60px rgba(0,0,0,0.7);
+}
+
+.pw-header {
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.pw {
+  background: linear-gradient(90deg, #f7fe72, #e8f971);
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  position: relative;
+  height: 70px;
+  width: 100%;
+  padding: 2rem;
+  color: #3c3d2b;
+  border-radius: 0 0 15px 15px;
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.pw button {
+  background-color: #94e8b4;
+  border: none;
+  font-family: inherit;
+  color: #3c3d2b;
+  padding: 0.3rem 0.6rem;
+  top: 0;
+  right: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  transform: translate(0, 20%);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.3s ease;
+  opacity: 0;
+  font-weight: bold;
+}
+
+.pw:hover button {
+  opacity: 1;
+  transform: translate(0, 0%);
+  background: #3c3d2b;
+  color: #94e8b4;
+}
+
+.pw-body {
+  padding: 20px;
+}
+
+.form-control {
+  color: #3c3d2b;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.generate {
+  background: linear-gradient(90deg, #94e8b4, #7bd3a8);
+  border: none;
+  border-radius: 15px;
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  color: #3c3d2b;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.generate:hover {
+  background: #3c3d2b;
+  color: #94e8b4;
+  transform: scale(1.05);
+}
