@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eaf4f4; /* Pastel açık mavi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+canvas {
+    border: 3px solid #ff7f50; /* Turuncu kenarlık */
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.toolbox {
+    background-color: #fdfdfd; /* Açık gri kutu */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    padding: 1rem;
+    width: 804px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.toolbox > * {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toolbox > *:hover {
+    background-color: #ff7f50;  /* Hover’da turuncu */
+    color: #fff;
+    border-color: #ff7f50;
+    transform: scale(1.1);
+}
+
+.toolbox > *:last-child {
+    margin-left: auto;
+}
