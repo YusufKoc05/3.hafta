@@ -1,0 +1,116 @@
+body {
+    background-color: #141414; /* Netflix tarzı koyu gri */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #b81d24; /* Sinema kırmızısı */
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.search {
+    background-color: #fff;
+    border: 2px solid #b81d24;
+    border-radius: 50px;
+    color: #000;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #888;
+}
+
+.search:focus {
+    background-color: #f0f0f0;
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+}
+
+.movie img {
+    width: 100%;
+    filter: brightness(0.9); /* Posterlere karanlık efekt */
+    transition: filter 0.3s ease;
+}
+
+.movie:hover img {
+    filter: brightness(1.1); /* Hover’da poster parlıyor */
+}
+
+.movie-info {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #000;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+.movie-info span.green {
+    color: #4caf50; /* İyi film → yeşil */
+}
+
+.movie-info span.orange {
+    color: #ffeb3b; /* Orta film → sarı */
+}
+
+.movie-info span.red {
+    color: #f44336; /* Kötü film → kırmızı */
+}
+
+.overview {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+    color: #ff5252;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
